@@ -1,0 +1,27 @@
+<ul class="nav nav-tabs" role="tablist">
+<li class="nav-item">
+<a class="nav-link active" data-toggle="tab" href="#pago"> Lista de Alunos </a>
+</li>
+</ul>
+
+<div class="tab-content">
+<div id="pago" class="container tab-pane active"> <br>
+<h3> Agenda </h3>
+<table class='table table-striped'>
+<thead> 
+<tr> <th> Nome </th> <th> RU </th>  <th> Curso </th> <th> Dt. Nascimento </th> </tr> 
+</thead>
+<tbody>
+<ng-container  *ngFor="let agenda of lista_agenda">
+<tr *ngIf="agenda.nome!=''">
+<td> {{ agenda.nome }} </td>
+<td> {{ agenda.RU }} </td> 
+<td> <span style="color: blue"> {{ agenda.curso }} </span> </td> 
+<td> {{ agenda.dt_nasc }}</td>
+</tr>
+</ng-container> 
+</tbody>
+</table>
+</div>
+</div>
+<router-outlet></router-outlet>
